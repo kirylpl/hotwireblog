@@ -1,0 +1,27 @@
+<%= form_with(model: comment_reaction) do |form| %>
+  <% if comment_reaction.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(comment_reaction.errors.count, "error") %> prohibited this comment_reaction from being saved:</h2>
+
+      <ul>
+        <% comment_reaction.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :comment_id %>
+    <%= form.number_field :comment_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reaction %>
+    <%= form.text_field :reaction %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

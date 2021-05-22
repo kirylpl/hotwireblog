@@ -4,5 +4,27 @@
 #
 # Examples:
 #
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
+
+5.times do |n|
+  User.create(name: "User #{n}", email: "user#{n}@mail.com", password: 'password')
+end
+
+5.times do |n|
+  Post.create(title: "Batman #{n}", body: 'Robin Good', user: User.first)
+end
+
+Post.all.each do |post|
+  comment = Comment.create(user: User.last,
+                       post: post,
+                       body: "Comment for post '#{post.id}'" )
+
+  5.times do |n|
+    CommentReaction.create(
+      user: User.find_by(email: "user#{rand(0..4)}@mail.com"),
+      comment: comment,
+      reaction: rand(0..2)
+    )
+  end
+  
+end

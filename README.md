@@ -5,20 +5,34 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+- Ruby version
 
-* System dependencies
+`2.7.2`
 
-* Configuration
+- System dependencies
 
-* Database creation
+Mysql
 
-* Database initialization
+`brew install mysql`
 
-* How to run the test suite
+`brew install openssl`
 
-* Services (job queues, cache servers, search engines, etc.)
+`gem install mimemagic -v '0.3.10' --source 'https://rubygems.org/' USE_FREEDESKTOP_PLACEHOLDER=true`
 
-* Deployment instructions
+- Configuration
 
-* ...
+- Database creation
+
+`rails db:setup`
+
+- Database initialization
+
+- How to run the test suite
+
+`rails test`
+
+- Services (job queues, cache servers, search engines, etc.)
+
+- Deployment instructions
+
+- ...

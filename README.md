@@ -5,6 +5,10 @@ application up and running.
 
 Things you may want to cover:
 
+- Soft real-time updates
+
+![real-time updates](https://github.com/kirylpl/hotwireblog/blob/main/example.gif)
+
 - Ruby version
 
 `2.7.2`

@@ -89,6 +89,10 @@ GEM
     ffi (1.15.1)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     jsonapi-serializer (2.1.0)
@@ -116,8 +120,6 @@ GEM
       nio4r (~> 2.0)
     racc (1.5.2)
     rack (2.2.3)
-    rack-mini-profiler (2.3.2)
-      rack (>= 1.2.0)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rails (6.1.3.2)
@@ -150,6 +152,7 @@ GEM
     rb-fsevent (0.11.0)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redis (4.2.5)
     regexp_parser (2.1.1)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -176,8 +179,12 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stimulus-rails (0.2.3)
+      rails (>= 6.0.0)
     thor (1.1.0)
     tilt (2.0.10)
+    turbo-rails (0.5.9)
+      rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     warden (1.2.9)
@@ -206,12 +213,13 @@ DEPENDENCIES
   byebug
   capybara (>= 3.26)
   devise
+  hotwire-rails
   jsonapi-serializer
   listen (~> 3.3)
   mysql2 (~> 0.5)
   puma (~> 5.0)
-  rack-mini-profiler (~> 2.0)
   rails (~> 6.1.3, >= 6.1.3.2)
+  redis (~> 4.0)
   sass-rails (>= 6)
   selenium-webdriver
   spring
